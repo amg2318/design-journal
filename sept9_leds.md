@@ -25,4 +25,8 @@ void loop() {
   delay(100);
 }
 ```
+Here's a video of what that looks like:
+https://github.com/user-attachments/assets/f2f1e4de-af9d-4b9b-a27d-06e971494361
+
+
 
