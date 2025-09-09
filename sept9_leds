@@ -1,1 +1,28 @@
+This week's electronics prompt is:
+> Do "something interesting" with 1+ LEDS and 1 LDR. 
+
+Upon finishing the overview tutorial, I first experimented with including a second LED that lit at lower sensor readings and the original at higher sensor readings, each at a brightness reflective of the strength of light read by the LDR.
+
+Code:
+```
+void setup() {
+  pinMode(11, OUTPUT);
+  pinMode(9, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = analogRead(A0);
+  Serial.print("Analog IN A0 value = ");
+  Serial.println(sensorValue);
+  if (sensorValue >= 50) {
+    analogWrite(9, sensorValue);
+    digitalWrite(11, LOW);
+  } else {
+    analogWrite(11, sensorValue/10);
+    digitalWrite(9, LOW);
+  }
+  delay(100);
+}
+```
 
