@@ -1,5 +1,3 @@
-# Week 3
-
 ## LED Experiment
 This week's electronics prompt is:
 > Do "something interesting" with 1+ LEDS and 1 LDR. 
