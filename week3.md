@@ -31,7 +31,7 @@ void loop() {
 [Here's](https://drive.google.com/file/d/1s06oIskS0ISfKvkFh1-rUU41RbVzYNmA/view?usp=sharing) a video of what that looks like.
  
 But that didn't seem interesting enough. I added another LDR and LED, and decided to take the rate of change to determine the fade rate.
-<img width="1168" height="1556" alt="image" src="https://github.com/user-attachments/assets/78a734a5-e6b8-474b-80a6-e1af9828a052" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/78a734a5-e6b8-474b-80a6-e1af9828a052" />
 
 (insert circuit diagram when I find a good way to do that for free)
 
