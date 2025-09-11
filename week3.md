@@ -29,7 +29,7 @@ void loop() {
 [Here's](https://drive.google.com/file/d/1s06oIskS0ISfKvkFh1-rUU41RbVzYNmA/view?usp=sharing) a video of what that looks like.
  
 But that didn't seem interesting enough. I added another LDR and LED, and decided to take the rate of change to determine the fade rate.
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/78a734a5-e6b8-474b-80a6-e1af9828a052" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/78a734a5-e6b8-474b-80a6-e1af9828a052" />
 
 (insert circuit diagram when I find a good way to do that for free)
 
@@ -99,4 +99,23 @@ void loop() {
 
 ## Making a ring
 
-Coming soon!
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/3ceb8b00-2532-4e59-abd1-53a1bf8c3a73" />
+
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/26f8d738-230d-4e4c-a719-c8ca50273558" />
+
+https://drive.google.com/file/d/1DB5aYrc7ZnoLjDyuRRvOmwxBLnHVdW7M/view?usp=sharing
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/37d829f6-eed0-4951-9734-18e826f6b4e7" />
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/48d98b63-3ff7-4740-b3bf-133c260095c7" />
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/aabd3f54-1830-479e-ad6a-08d6ecb77f83" />
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/40537635-e5f6-48f2-8776-802a31fe01f9" />
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/787832d6-2b11-40a0-a3a4-320a5bb95534" />
+
+https://drive.google.com/file/d/1R1mZiOCLUg67ZzbwT8xOVSuAKnNkELee/view?usp=sharing
+
+
