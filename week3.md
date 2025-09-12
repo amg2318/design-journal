@@ -97,14 +97,48 @@ void loop() {
 }
 ```
 
-## Making a ring
+## Making a ring 
+This week's fabrication prompt is:
+> Create a ring that describes a part of your personality or a cause you believe in.
+> Make it bold. Make it big. Have fun with it!
 
-
+For my initial brainstorm, I focused on what kinds of mechanisms or technical qualities would be cool in the final product before thinking about the message I wanted to convey. To translate my messy handwriting in the picture below, here are some of the ideas I had:
+- a ring as a slot with interchangeable parts (the top sketch)
+- a looking glass mounted on top of a ring with changeable lenses of different materials (ruled out because I didn't actually have many materials on hand or from the shop)
+- a ring as a holder for something else, e.g. a pin cushion for sewing, a vice (didn't know how to execute this), Apple stylus
+- a puzzle mounted on a ring
+- a ring with attachments that move with living hinges, e.g. plants swaying in the wind (bottom sketch)
+ 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/3ceb8b00-2532-4e59-abd1-53a1bf8c3a73" />
+
+When considering how these different ideas could work with parts of my identity or causes I care about, I settled on the last one. In the last few years, gardening has become a very healing activity for me. I re-landscaped my parents' house and plan on continuing to when I can. The process has completely revolutionized the way I see "gardens" and environmentalism. _Plus, it also felt like a callback to my old Doodle4Google entries in which middle school me attempted to use my finalist platform to campaign for environmentalism for several years._
+
+Another inspiration was this meme/drawing that keeps showing up in my feed (I _think_ the original artist is Favorite Vegetable on X):
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/f72a6cdb-c438-46b5-a217-87ea7a68de0a" />
+
+After some consultation with my partner (former DES INV 22 student and professional mechanical engineer), I learned that living hinges would likely break at this small of a scale. So I improved on my design by expanding to knuckles and increasing the stem size of each of the plants in the ring plantbed. 
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/26f8d738-230d-4e4c-a719-c8ca50273558" />
 
-https://drive.google.com/file/d/1DB5aYrc7ZnoLjDyuRRvOmwxBLnHVdW7M/view?usp=sharing
+<br/>
+<br/>
+Then, I uploaded a photo of the sketch to Procreate to refine it.
+
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/7675cede-9ece-44bd-aeba-28d986152140" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/f5b56933-69de-4113-a7cb-6a28ba5a1976" />
+
+<br/>
+<br/>
+In Illustrator, I tried to replicate the general shape of commercially made knuckles with my approximate ring size (a little over-estimated, just in case) and combined that design with the garden sketch to create the laser cutting file. _Note: the image on the right has the stroke sized up for visibility._
+
+<br/>
+<br/>
+<img width="400" alt="Screenshot 2025-09-11 at 6 12 08 PM" src="https://github.com/user-attachments/assets/03c5883d-6ce6-495e-8850-156c8b790633" />
+<img width="400" alt="Screenshot 2025-09-11 at 6 17 17 PM" src="https://github.com/user-attachments/assets/4fb0e252-e0a4-46e3-8b44-76e1206e9fc2" />
+
+<br/>
+<br/>
+Next: (lasercutting!) [https://drive.google.com/file/d/1DB5aYrc7ZnoLjDyuRRvOmwxBLnHVdW7M/view?usp=sharing] <br/>
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/37d829f6-eed0-4951-9734-18e826f6b4e7" />
 
