@@ -116,7 +116,7 @@ When considering how these different ideas could work with parts of my identity 
 Another inspiration was this meme/drawing that keeps showing up in my feed (I _think_ the original artist is Favorite Vegetable on X):
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/f72a6cdb-c438-46b5-a217-87ea7a68de0a" />
 
-After some consultation with my partner (former DES INV 22 student and professional mechanical engineer), I learned that living hinges would likely break at this small of a scale. So I improved on my design by expanding to knuckles and increasing the stem size of each of the plants in the ring plantbed. 
+After some consultation with my partner (former DES INV 22 student and professional mechanical engineer), I learned that living hinges would likely break at this small of a scale. So I improved on my design by expanding to knuckles and increasing the stem size of each of the plants in the ring plantbed. I also incorporated two more layers that would (hopefully) add more stability. 
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/26f8d738-230d-4e4c-a719-c8ca50273558" />
 
@@ -129,27 +129,31 @@ Then, I uploaded a photo of the sketch to Procreate to refine it.
 
 <br/>
 <br/>
-In Illustrator, I tried to replicate the general shape of commercially made knuckles with my approximate ring size (a little over-estimated, just in case) and combined that design with the garden sketch to create the laser cutting file. _Note: the image on the right has the stroke sized up for visibility._
+In Illustrator, I tried to replicate the general shape of commercially made knuckles with my approximate ring size (a little over-estimated, just in case) and combined that design with the garden sketch to create the laser cutting file. (Note: the image has the stroke sized up for visibility.)
 
 <br/>
 <br/>
-<img width="400" alt="Screenshot 2025-09-11 at 6 12 08 PM" src="https://github.com/user-attachments/assets/03c5883d-6ce6-495e-8850-156c8b790633" />
 <img width="400" alt="Screenshot 2025-09-11 at 6 17 17 PM" src="https://github.com/user-attachments/assets/4fb0e252-e0a4-46e3-8b44-76e1206e9fc2" />
 
 <br/>
 <br/>
-Next: (lasercutting!) [https://drive.google.com/file/d/1DB5aYrc7ZnoLjDyuRRvOmwxBLnHVdW7M/view?usp=sharing] <br/>
+Next: [lasercutting](https://drive.google.com/file/d/1DB5aYrc7ZnoLjDyuRRvOmwxBLnHVdW7M/view?usp=sharing)!
+<br/>
+<br/>
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/37d829f6-eed0-4951-9734-18e826f6b4e7" />
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/37d829f6-eed0-4951-9734-18e826f6b4e7" />
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/48d98b63-3ff7-4740-b3bf-133c260095c7" />
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/48d98b63-3ff7-4740-b3bf-133c260095c7" />
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/aabd3f54-1830-479e-ad6a-08d6ecb77f83" />
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/aabd3f54-1830-479e-ad6a-08d6ecb77f83" />
+
+<br/>
+<br/>
+As you can see above, it took multiple cuts and adjustments to get the knuckles to get cut properly. I struggled with the live hinges being too close together and snapping, cutting the wood all the way through, and making the ring wearable via the size of the finger holes. 3-4 cuts later, I finally got a set that worked. I glued, assembled, and sanded with minimal breakage to get [this](https://drive.google.com/file/d/1R1mZiOCLUg67ZzbwT8xOVSuAKnNkELee/view?usp=sharing) final result:
+<br/>
+<br/>
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/40537635-e5f6-48f2-8776-802a31fe01f9" />
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/787832d6-2b11-40a0-a3a4-320a5bb95534" />
-
-https://drive.google.com/file/d/1R1mZiOCLUg67ZzbwT8xOVSuAKnNkELee/view?usp=sharing
-
 
