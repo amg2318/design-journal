@@ -157,3 +157,6 @@ As you can see above, it took multiple cuts and adjustments to get the knuckles 
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/787832d6-2b11-40a0-a3a4-320a5bb95534" />
 
+If I were to make more changes, I would have adjusted the raster level of the details to have more contrast from the rest of the plants and added more cuts for the living hinges to make it more wiggly. For comfort, I would slightly reduce the space between the finger holes so that my fingers didn't have to stretch so far to reach them. Overall, really happy with the plant knuckles!
+
+Thanks for reading! This was a really fun week. :)
