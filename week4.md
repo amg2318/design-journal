@@ -69,7 +69,7 @@ However, I wanted there to be more of a gradual transition between the colors an
 
 ```
 
-</br>
+
 ## 3D Printed Rings
 
 This week's fabrication assignment was:
