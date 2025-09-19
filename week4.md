@@ -6,7 +6,10 @@ Here's a picture of the wiring:
 </br>
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/861543bc-5d4c-44f3-aedb-2b41e04a4c96" />
 
-(insert circuit diagram)
+Here's the circuit diagram:
+</br>
+<img width="800" src="https://github.com/user-attachments/assets/a0dc2d65-ea81-49fb-aa86-cb086196d226" />
+
 
 Here's the first iteration ([video](https://drive.google.com/file/d/1NB7KVbpYn_PooYlIUoySLBr6USCV2Wq3/view?usp=sharing)) and the code associated:
 
@@ -73,4 +76,54 @@ However, I wanted there to be more of a gradual transition between the colors an
 ## 3D Printed Rings
 
 This week's fabrication assignment was:
-> 
+> Recreate your laser cut ring for 3DP. For a second ring, design it for 3DP.
+
+I returned to my Illustrator from last week and removed the living hinges since I didn't think would transfer well to 3D printing, resulting in the following image:
+</br>
+<img width="400" alt="Screenshot 2025-09-16 at 9 24 46 PM" src="https://github.com/user-attachments/assets/627b67f2-15cb-45c7-8632-8c7048bcd524" />
+
+I imported the file into Fusion and to replicate the contrast and depth, I extruded the petal and leaf patterns to a higher point than the rest of the ring:
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/16ef5afd-c447-4840-9cce-98ccf8eed322" />
+
+Then, onto the next ring. My initial inclination was to try to transfer a classic pattern from Chinese enamel dishware (common in Peranakan households in Singapore, like my mom's) onto the surface of the ring. Here's an example from "The Peranakan House" in Katong:
+</br>
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/bbccfcdd-6742-42a2-9d6e-eefe77608150" />
+
+I struggled for a while trying to replicate the pattern in any legible way in Illustrator before changing my mind. I then thought I would try to use an existing line drawing I had of a basset hound as a centerpiece for a ring: 
+</br>
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/6be7dd61-a0c5-4ca5-9374-aee5b0f3b238" />
+<img width="400" alt="Screenshot 2025-09-18 at 11 37 30 PM" src="https://github.com/user-attachments/assets/6e0f4b91-6987-4d42-a670-ab03e67dbcac" />
+
+Fusion had all kinds of errors on the transfer of this (after processing in Illustrator) that I couldn't seem to resolve. Since the transfer between softwares seemed to be the source of my problems, I decided to just model the ring from scratch within Fusion and see what kinds of things I could make. I ended up with two different ring designs, one with a lego hand sticking up and the other with BB8 from Star Wars:
+</br>
+<img width="400" alt="Screenshot 2025-09-18 at 11 38 37 PM" src="https://github.com/user-attachments/assets/7d8e470e-b956-4c46-91ea-c25c0c6ee37d" />
+<img width="300" alt="Screenshot 2025-09-17 at 8 28 08 AM" src="https://github.com/user-attachments/assets/d599ac03-0688-4020-bbbd-c3afa918e5fd" />
+
+</br>
+
+_Note: From my minimal previous 3D printing experience, I knew I should flatten part of the ring so it could stand on the bed which is why both of the above designs have a plane and/or a slice that I may have cut too deep into the ring._
+
+I ultimately decided the lego hand was too simple (which I regret), and decided to print the BB8 with the flower knuckles. I printed on the Prusa MK4 and generated organic supports:
+</br>
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/a32c24c7-7847-417a-ae9d-ce105e5e5c62" />
+</br>
+
+While the first print ultimately failed due to 3D printer issues (z-axis was too high? filament clogging? -- some things other people said when they saw it), I learned that I had not adjusted the size when importing my design from Illustrator to Fusion causing the knuckles (which was mostly complete despite the issues) not to fit on my hand:
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/082dd2d0-526c-4bfd-834b-c769b1116c78" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/2cc0fede-9641-43cf-9a6b-6da5b48d9bea" />
+
+So, I tried to use a different printer! I forgot to take pictures of the second version of the knuckle ring (which still ended up a little small), but here is BB8 fresh off the printer:
+</br>
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/6612f027-5f2c-4acf-94be-4f1ce43f65dc" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/f93b5e74-16ee-4d29-af1f-8bc8a84fa288" />
+</br>
+
+I had some paint on hand so I painted the rings to make it more obvious what the figures were (in the future I should just get better at modeling). [Here's](https://drive.google.com/file/d/19EHnM84CXPORIfCHtB_7XhKR2ghoL0n-/view?usp=sharing) how they turned out:
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/152ede74-31ef-4b6a-a316-f473d20cc2b2" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/480911db-35f2-4cef-ba16-2766eb8890fd" />
+
+In retrospect, I should have tried to go for my first idea, or at least some version of a pattern wrapped around the band of the ring. I think that would have been a more interesting and challenging use of 3D printing.
+
+Thanks for reading! Onto the first project! :)
