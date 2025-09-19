@@ -6,6 +6,8 @@ Here's a picture of the wiring:
 </br>
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/861543bc-5d4c-44f3-aedb-2b41e04a4c96" />
 
+(insert circuit diagram)
+
 Here's the first iteration ([video](https://drive.google.com/file/d/1NB7KVbpYn_PooYlIUoySLBr6USCV2Wq3/view?usp=sharing)) and the code associated:
 
 ```
