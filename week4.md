@@ -68,7 +68,63 @@ You might notice that the code is slightly different for the red LED compared to
 
 To further investigate the issue, I commented out everything except for an analogWrite line for each LED color and I experimented with different values. For some reason, the green would light up for any value but the red and blue would only light up at very high values (200+).
 
-However, I wanted there to be more of a gradual transition between the colors and updated the code accordingly which required using analog sensor values for all LEDs. I had some help from Isabella Fiorante who was working on [something similar](https://github.com/ifiorante/TDF-FA25/blob/main/week-4/potentiometer_trial). It still didn't work. 
+However, I wanted there to be more of a gradual transition between the colors and updated the code accordingly which required using analog sensor values for all LEDs. I had some help from Isabella Fiorante who was working on [something similar](https://github.com/ifiorante/TDF-FA25/blob/main/week-4/potentiometer_trial). It still didn't work:
+
+```
+#include <Servo.h>
+
+Servo myservo;
+int potpin = A0; // the input pin for the potentiometer
+int sensorValue = 0; // value read from the potentiometer
+int outputValue = 0; // adjusted for LED
+int val; // sensor value adjusted for servo
+
+const int redLEDPin = 12;
+const int greenLEDPin = 6;
+const int blueLEDPin = 4; 
+
+void setup() {
+  myservo.attach(9); // initializing servo
+  pinMode(redLEDPin, OUTPUT);
+  pinMode(greenLEDPin, OUTPUT);
+  pinMode(blueLEDPin, OUTPUT);
+  Serial.begin(9600); // initializing serial communication at 9600bd
+}
+
+void loop() {
+  sensorValue = analogRead(potpin); // read the analog in value from the portentiometer
+
+  // for debugging:
+  //Serial.print("sensor = "); 
+  //Serial.print(sensorValue);
+  Serial.print("\t output = ");
+  Serial.println(outputValue);
+
+  //LEDs
+  if (sensorValue <= 340) {  // for right third of values on the potentiometer (red)
+    digitalWrite(greenLEDPin, LOW);
+    digitalWrite(blueLEDPin, LOW);
+    outputValue = map(sensorValue, 0, 1023, 0, 255);   // map third value to LED scale
+    analogWrite(redLEDPin, outputValue);
+  } else if (sensorValue <= 683) { // for middle third of values on the potentiometer (green)
+    digitalWrite(redLEDPin, LOW);
+    digitalWrite(blueLEDPin, LOW);
+    outputValue = map(sensorValue - 340, 0, 1023, 0, 255);   // map third value to LED scale
+    analogWrite(greenLEDPin, outputValue);
+  } else { // for left third of values on the potentiometer (blue)
+    digitalWrite(greenLEDPin, LOW);
+    digitalWrite(redLEDPin, LOW);
+    outputValue = map(sensorValue - 684, 0, 1023, 0, 255);   // map third value to LED scale
+    analogWrite(blueLEDPin, outputValue);
+  }
+
+  //Servo
+  val = map(sensorValue, 0, 1023, 0, 180); // map sensor value to servo values
+  myservo.write(val);
+  delay(15); // servo lag time
+}
+
+```
 
 
 ## 3D Printed Rings
