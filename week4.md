@@ -66,11 +66,9 @@ void loop() {
 
 You might notice that the code is slightly different for the red LED compared to the other two. I tried to expand on the "AnalogInOutSerial" code to light the RGB LED by using the same value mapping, but for some reason it wasn't working for the first third of values. Printing out the values showed that the LED should have lit red and there didn't seem to be a wiring issue so I used digitalWrite instead of using the analog sensor value. (I really want to know why this doesn't work!)
 
-However, I wanted there to be more of a gradual transition between the colors and updated the code accordingly which required using analog sensor values for all LEDs. I had some help from Isabella Fiorante who was working on [something similar](https://github.com/ifiorante/TDF-FA25/blob/main/week-4/potentiometer_trial). You can find the video of the second iteration here.
+To further investigate the issue, I commented out everything except for an analogWrite line for each LED color and I experimented with different values. For some reason, the green would light up for any value but the red and blue would only light up at very high values (200+).
 
-```
-
-```
+However, I wanted there to be more of a gradual transition between the colors and updated the code accordingly which required using analog sensor values for all LEDs. I had some help from Isabella Fiorante who was working on [something similar](https://github.com/ifiorante/TDF-FA25/blob/main/week-4/potentiometer_trial). It still didn't work. 
 
 
 ## 3D Printed Rings
@@ -121,9 +119,10 @@ So, I tried to use a different printer! I forgot to take pictures of the second 
 </br>
 
 I had some paint on hand so I painted the rings to make it more obvious what the figures were (in the future I should just get better at modeling). [Here's](https://drive.google.com/file/d/19EHnM84CXPORIfCHtB_7XhKR2ghoL0n-/view?usp=sharing) how they turned out:
+</br>
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/152ede74-31ef-4b6a-a316-f473d20cc2b2" />
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/480911db-35f2-4cef-ba16-2766eb8890fd" />
-
+</br>
 In retrospect, I should have tried to go for my first idea, or at least some version of a pattern wrapped around the band of the ring. I think that would have been a more interesting and challenging use of 3D printing.
 
 Thanks for reading! Onto the first project! :)
