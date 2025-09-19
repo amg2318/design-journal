@@ -158,7 +158,7 @@ Fusion had all kinds of errors on the transfer of this (after processing in Illu
 
 _Note: From my minimal previous 3D printing experience, I knew I should flatten part of the ring so it could stand on the bed which is why both of the above designs have a plane and/or a slice that I may have cut too deep into the ring._
 
-I ultimately decided the lego hand was too simple (which I regret), and decided to print the BB8 with the flower knuckles. I printed on the Prusa MK4 and generated organic supports:
+I ultimately decided the lego hand was too simple (which I regret), and decided to print the BB8 with the flower knuckles. I printed on the Prusa MK4 and generated organic supports (ignore the settings shown in the slicer, they are not the ones I used in the end):
 </br>
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/a32c24c7-7847-417a-ae9d-ce105e5e5c62" />
 </br>
