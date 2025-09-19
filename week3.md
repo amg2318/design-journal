@@ -31,7 +31,9 @@ void loop() {
 But that didn't seem interesting enough. I added another LDR and LED, and decided to take the rate of change to determine the fade rate.
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/78a734a5-e6b8-474b-80a6-e1af9828a052" />
 
-(insert circuit diagram when I find a good way to do that for free)
+Here's the circuit diagram:
+</br>
+<img width="800" alt="Neat Snicket (1)" src="https://github.com/user-attachments/assets/79a7209a-a754-4da2-a468-373622881270" />
 
 For the [first iteration](https://drive.google.com/file/d/17X2XXrZP_aC7mB7s_i-xOIYH8K4gZv0N/view?usp=sharing), the red LED fade rate was based on immediate rate of change of the first LDR sensor, the green LED was simply turned on/off by covering the second LDR sensor, and the blue LED would blink unless the first LDR sensor was covered. (A challenge of this was tuning the values so the differences in light were apparent and discovering only certain channels can have PWM output!)
 
