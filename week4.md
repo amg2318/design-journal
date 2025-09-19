@@ -68,7 +68,7 @@ You might notice that the code is slightly different for the red LED compared to
 
 To further investigate the issue, I commented out everything except for an analogWrite line for each LED color and I experimented with different values. For some reason, the green would light up for any value but the red and blue would only light up at very high values (200+).
 
-However, I wanted there to be more of a gradual transition between the colors and updated the code accordingly which required using analog sensor values for all LEDs. I had some help from Isabella Fiorante who was working on [something similar](https://github.com/ifiorante/TDF-FA25/blob/main/week-4/potentiometer_trial). It still didn't work:
+However, I wanted there to be more of a gradual transition between the colors and updated the code accordingly which required using analog sensor values for all LEDs. I had some help from Isabella Fiorante who was working on [something similar](https://github.com/ifiorante/TDF-FA25/blob/main/week-4/potentiometer_trial). It still didn't work, so I tried this but to no avail:
 
 ```
 #include <Servo.h>
