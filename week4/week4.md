@@ -231,15 +231,84 @@ void TestEm() {
 // ---------------------------------
 ```
 
-I realized that I was using the map function incorrectly in my previous code iterations and that the resistors are too strong, preventing the dimming effect from being as perceivable. So, I updated my circuit to optimize relative brightness of the various colors and switched to the cycling of colors (i.e. instead of three colors changing brightness, the colors blend together in the transitions) with simultaneous servo movement, all controlled by the potentiometer position. I also realized that the potentiometer values aren't very accurate and fluctuate as it moves, causing color flickers and the servo to reverse directions suddenly sometimes. 
+I realized that I was using the map function incorrectly in my previous code iterations and that the resistors are too strong, [preventing the dimming effect from being as perceivable](https://drive.google.com/file/d/1W2Llo8Pg5JLRxb9Na3CXjWgoa23SJHOO/view?usp=sharing). His code also reminded me to consider the elegance and readability of my code while writing it. So, I updated my circuit to optimize relative brightness of the various colors and switched to the cycling of colors (i.e. instead of three colors changing brightness, the colors blend together in the transitions) with simultaneous servo movement, all controlled by the potentiometer position. I also realized that the potentiometer values aren't very accurate and fluctuate as it moves, causing color flickers and the servo to reverse directions suddenly sometimes. 
 
 Here's the final circuit:
+</br>
+<img width="800" src="https://github.com/user-attachments/assets/23c9b190-88d9-4336-a303-beb03efc17c2" />
+</br>
 
 Here's the final wiring:
+</br>
+<img width="800" src="https://github.com/user-attachments/assets/c91c7ae6-1754-43b1-a91d-a6531e4ad82f" />
+</br>
 
 Here's the final code:
 
-You can see it working here. While this week was challenging, I deepened my understanding of electronics and Arduino, and still had a lot of fun in the process. 
+```
+#include <Servo.h>
+
+Servo myservo;
+int potpin = A0; // the input pin for the potentiometer
+int sensorValue = 0; // value read from the potentiometer
+int outputValue = 0; // adjusted for servo
+
+const int redLEDPin = 12; // the output pin for the red of the RGB LED
+const int greenLEDPin = 6; // the output pin for the green of the RGB LED
+const int blueLEDPin = 4;  // the output pin for the blue of the RGB LED
+
+int redBrightness = 0; // potentiometer value adjusted for red LED
+int greenBrightness = 0; // potentiometer value adjusted for green LED
+int blueBrightness = 0; // potentiometer value adjusted for blue LED
+
+void setup() {
+  myservo.attach(9); // initializing servo
+  pinMode(redLEDPin, OUTPUT); //initializing LED pins for output
+  pinMode(greenLEDPin, OUTPUT);
+  pinMode(blueLEDPin, OUTPUT);
+  Serial.begin(9600); // initializing serial communication at 9600bd
+}
+
+void loop() {
+  sensorValue = analogRead(potpin); // read the analog in value from the portentiometer
+
+  // for debugging:
+  //Serial.print("sensor = "); 
+  //Serial.print(sensorValue);
+  //Serial.print("\t output = ");
+  //Serial.println(outputValue);
+
+  //LEDs
+  if (sensorValue <= 340) {  // for right third of values on the potentiometer (red)
+    redBrightness = map(sensorValue, 0, 340, 255, 0); // map third value to LED scale, red gets lighter as it gets closer to green
+    greenBrightness = map(sensorValue, 0, 340, 0, 255);
+    blueBrightness = 0;
+  } else if (sensorValue <= 683) { // for middle third of values on the potentiometer (green)
+    greenBrightness = map(sensorValue, 341, 683, 255, 0);   // map third value to LED scale
+    blueBrightness = map(sensorValue, 341, 683, 0, 255);
+    redBrightness = 0;
+  } else if (sensorValue <= 1023) { // for left third of values on the potentiometer (blue)
+    blueBrightness = map(sensorValue, 684, 1023, 255, 0);   // map third value to LED scale
+    redBrightness = map(sensorValue, 684, 1023, 0, 255);
+    greenBrightness = 0;
+  } else {
+    Serial.println("Value out of range!"); // for security
+  }
+
+  //write to RGB LED
+  analogWrite(redLEDPin, redBrightness);
+  analogWrite(greenLEDPin, greenBrightness);
+  analogWrite(blueLEDPin, blueBrightness);
+
+  //Servo
+  outputValue = map(sensorValue, 0, 1023, 0, 180); // map sensor value to servo values
+  myservo.write(outputValue);
+  delay(15); // buffer
+}
+
+```
+
+You can see it working [here](https://drive.google.com/file/d/1BcMI911FgiM76KZHTvLVDVycnMaBYog6/view?usp=sharing). While this week was challenging, I deepened my understanding of electronics and Arduino, and still had a lot of fun in the process.
 </br>
 
 ## 3D Printed Rings
