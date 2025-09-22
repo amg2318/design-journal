@@ -8,7 +8,7 @@ Here's a picture of the wiring:
 
 Here's the circuit diagram:
 </br>
-<img width="800" src="https://github.com/user-attachments/assets/a0dc2d65-ea81-49fb-aa86-cb086196d226" />
+<img width="800" src="https://github.com/user-attachments/assets/d5d5daf6-31da-4edf-b690-6fa12146e340" />
 
 
 Here's the first iteration ([video](https://drive.google.com/file/d/1NB7KVbpYn_PooYlIUoySLBr6USCV2Wq3/view?usp=sharing)) and the code associated:
