@@ -8,7 +8,7 @@ Here's a picture of the wiring:
 
 Here's the circuit diagram:
 </br>
-<img width="800" src="https://github.com/user-attachments/assets/d5d5daf6-31da-4edf-b690-6fa12146e340" />
+<img width="800" src="https://github.com/user-attachments/assets/952c9556-9abe-4e99-8028-9b283a66a58f" />
 
 
 Here's the first iteration ([video](https://drive.google.com/file/d/1NB7KVbpYn_PooYlIUoySLBr6USCV2Wq3/view?usp=sharing)) and the code associated:
@@ -125,7 +125,122 @@ void loop() {
 }
 
 ```
+</br>
+After some guidance from Sudhu, I spread out my circuit to debug the wiring more easily and used some test code that he sent to debug my code: 
 
+```
+/*
+  Analog Input
+
+  Read an analog sensor on analog pin 0 and
+  map the sensor value to a range of colors
+  displayed on an RGB LED
+
+  The circuit:
+  - potentiometer
+    center pin of the potentiometer to the analog input 0
+    one side pin (either one) to ground
+    the other side pin to +5V
+  - RGB LED
+    cathode (longest leg) attached to ground
+    red - pin 9
+    green - pin 10
+    blue - pin 11
+ 
+    modified from http://www.arduino.cc/en/Tutorial/AnalogInput
+*/
+
+const int sensorPin = A0; // set the input pin for the potentiometer
+int sensorValue = 0;      // variable to store the value coming from the sensor 
+int val = 0;              // remap value
+const int redLED = 12;       // set the pin for the red LED
+const int greenLED = 6;    // set the pin for the green LED
+const int blueLED = 4;     // set the pin for the blue LED
+int redBrightness = 0;      //variable to store the brightness of the red LED
+int greenBrightness = 0;      //variable to store the brightness of the green LED
+int blueBrightness = 0;      //variable to store the brightness of the blue LED
+
+void setup() {
+  pinMode(redLED, OUTPUT);    // declare the ledPin as an OUTPUT:
+  pinMode(greenLED, OUTPUT);  // declare the ledPin as an OUTPUT:
+  pinMode(blueLED, OUTPUT);   // declare the ledPin as an OUTPUT:
+  Serial.begin(9600);  // initialize serial communication
+  //TestEm();
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);
+  
+  // print out the value you read:
+  Serial.print("sensorValue: "); Serial.print(sensorValue);
+
+  // map sensor value to RGB brightness
+  val = sensorValue;
+  
+  if(val >= 0 && val <= 341){
+    // RED 
+    redBrightness = map(val, 0, 341, 255, 0); 
+    greenBrightness = map(val, 0, 341, 0, 255);  
+    blueBrightness = 0;        // extra security
+  } else if(val > 341 && val <= 682){
+    // GREEN
+    redBrightness = 0;  // extra security
+    greenBrightness = map(val, 342, 682, 255, 0);
+    blueBrightness = map(val, 342, 682, 0, 255);  
+  } else if (val > 682 && val <= 1023){ 
+    //BLUE
+    blueBrightness = map(val, 683, 1023, 255, 0);
+    greenBrightness = 0;  // extra security
+    redBrightness = map(val, 683, 1023, 0, 255);
+  } else {
+    Serial.println("val remap: OUT OF RANGE");
+  }
+  // write to RGB LED
+  analogWrite(redLED, redBrightness);
+  analogWrite(greenLED, greenBrightness);
+  analogWrite(blueLED, blueBrightness);
+
+  // print out RGB brightness values
+  Serial.print("\t RGB: "); Serial.print(redBrightness);
+  Serial.print(", "); Serial.print(greenBrightness);
+  Serial.print(", "); Serial.println(blueBrightness);
+  delay(1000);
+}
+
+// ---------------------------------
+void TestEm() {
+  //Test the LED.
+  Serial.println("Starting test");
+  analogWrite(redLED, 255);
+  Serial.println("Red");
+  delay(3000);
+  analogWrite(redLED, 0);
+  delay(3000);
+  analogWrite(greenLED, 255);
+  Serial.println("green");
+  delay(3000);
+  analogWrite(greenLED, 0);
+  delay(3000);
+  analogWrite(blueLED, 255);
+  Serial.println("blue");
+  delay(3000);
+  analogWrite(blueLED, 0);
+  delay(3000);
+}
+// ---------------------------------
+```
+
+I realized that I was using the map function incorrectly in my previous code iterations and that the resistors are too strong, preventing the dimming effect from being as perceivable. So, I updated my circuit to optimize relative brightness of the various colors and switched to the cycling of colors (i.e. instead of three colors changing brightness, the colors blend together in the transitions) with simultaneous servo movement, all controlled by the potentiometer position. I also realized that the potentiometer values aren't very accurate and fluctuate as it moves, causing color flickers and the servo to reverse directions suddenly sometimes. 
+
+Here's the final circuit:
+
+Here's the final wiring:
+
+Here's the final code:
+
+You can see it working here. While this week was challenging, I deepened my understanding of electronics and Arduino, and still had a lot of fun in the process. 
+</br>
 
 ## 3D Printed Rings
 
