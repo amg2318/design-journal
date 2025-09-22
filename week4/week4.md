@@ -308,7 +308,7 @@ void loop() {
 
 ```
 
-You can see it working [here](https://drive.google.com/file/d/1BcMI911FgiM76KZHTvLVDVycnMaBYog6/view?usp=sharing). While this week was challenging, I deepened my understanding of electronics and Arduino, and still had a lot of fun in the process.
+You can see it working [here](https://drive.google.com/file/d/1BcMI911FgiM76KZHTvLVDVycnMaBYog6/view?usp=sharing). While this week was challenging, I deepened my understanding of wiring and Ardunio built-in functions, and still had a lot of fun in the process.
 </br>
 
 ## 3D Printed Rings
