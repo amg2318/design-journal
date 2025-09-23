@@ -109,7 +109,7 @@ With the movement I had been picturing, I set up a non-permanent test of concept
 </br>
 <img width="400" src="https://github.com/user-attachments/assets/27271f11-bd47-4087-b3fd-153b0fa98c30" />
 
-This test of concept involved tying strings to a dowel rod that was taped to the servo. The combination of slow servo speed and the looseness of the strings meant that it barely moved the paper, so that ultimately failed. I'm going to try cutting some skewers for the arms with string joints or something so that the sides are pulled more horizontally. 
+This test of concept involved tying strings to a dowel rod that was taped to the servo. The combination of slow servo speed and the looseness of the strings meant that it [barely moved the paper](https://drive.google.com/file/d/1NMr_Zdx49CXrNykEsECmnS2-BhMcqVXq/view?usp=sharing), so that ultimately failed. I'm going to try cutting some skewers for the arms with string joints or something so that the sides are pulled more horizontally. 
 
 
 
