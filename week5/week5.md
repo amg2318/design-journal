@@ -109,7 +109,13 @@ With the movement I had been picturing, I set up a non-permanent test of concept
 </br>
 <img width="400" src="https://github.com/user-attachments/assets/27271f11-bd47-4087-b3fd-153b0fa98c30" />
 
-This test of concept involved tying strings to a dowel rod that was taped to the servo. The combination of slow servo speed and the looseness of the strings meant that it [barely moved the paper](https://drive.google.com/file/d/1NMr_Zdx49CXrNykEsECmnS2-BhMcqVXq/view?usp=sharing), so that ultimately failed. I'm going to try cutting some skewers for the arms with string joints or something so that the sides are pulled more horizontally. 
+This test of concept involved tying strings to a dowel rod that was taped to the servo. The combination of slow servo speed and the looseness of the strings meant that it [barely moved the paper](https://drive.google.com/file/d/1NMr_Zdx49CXrNykEsECmnS2-BhMcqVXq/view?usp=sharing), so that ultimately failed. I decided to look into different mechanisms for movement, specifically in two opposite directions and found a reverse-motion linkage:
+</br>
+<img width="492" height="479" alt="image" src="https://github.com/user-attachments/assets/ef2586e0-e81b-40ca-b2bc-611d4001a014" />
+
+Based on this, I sketched out a way to use the linkage system:
+</br>
+
 
 
 
