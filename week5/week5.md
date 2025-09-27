@@ -109,6 +109,8 @@ Here's the final circuit:
 </br>
 <img width="600" src="https://github.com/user-attachments/assets/5d9641a2-ab84-4781-aa53-85ddbdab4784" />
 
+## Fabrication
+
 With the movement I had been picturing, I set up a non-permanent test of concept:
 </br>
 <img width="400" src="https://github.com/user-attachments/assets/27271f11-bd47-4087-b3fd-153b0fa98c30" />
