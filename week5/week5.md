@@ -101,9 +101,13 @@ void loop() {
   delay(50);
 }
 ```
-Here's the wiring:
+Here's the final wiring (spoiler: it remains the same through to the final):
 </br>
 <img width="400" src="https://github.com/user-attachments/assets/7672e580-977d-416d-88c3-d090a8f597fd" />
+
+Here's the final circuit:
+</br>
+<img width="600" src="https://github.com/user-attachments/assets/5d9641a2-ab84-4781-aa53-85ddbdab4784" />
 
 With the movement I had been picturing, I set up a non-permanent test of concept:
 </br>
@@ -115,7 +119,131 @@ This test of concept involved tying strings to a dowel rod that was taped to the
 
 Based on this, I sketched out a way to use the linkage system:
 </br>
+<img width="400" src="https://github.com/user-attachments/assets/b264430d-5289-4ab9-bf8b-ab69fd1f1949" />
+
+Then I designed some potential pieces for the linkage based on my drawings in Illustrator for laser cutting:
+</br>
+<img width="600" src="https://github.com/user-attachments/assets/867e1c88-c6d0-41a2-af58-3a3f97022a1b" />
+
+Here's a picture of the parts getting laser cut:
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/35a83287-1cba-4add-b214-f745939c60b3" />
+
+Then, I started trying different ways to assemble the linkage using tape and pipe cleaners (so I could keep re-using the parts), changing the angles, places of attachment, and movement. [Here's the first proof of concept](https://drive.google.com/file/d/1hoHI1APXd9pxgtBTam5i-KhZc2EHECET/view?usp=sharing):
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/ea4ff0d6-8381-4ff1-af69-21a87d18ec7d" />
+
+It seemed to open the origami box the way I wanted it to, so I moved on to putting it into the box. It proved to be way more difficult than I expected, and didn't really fit in the box I had. None of the set-ups stayed together in the box for very long, but you can see one brief attempt [here](https://drive.google.com/file/d/1-wvTM3H8LO8OP2i2cf0Dmh8Yfm6cZCy5/view?usp=sharing). After failed attempts, I realized changing the whole orientation to be horizontal would make it much easier to support:
+</br>
+<img width="600" src="https://github.com/user-attachments/assets/013bd07c-41e0-4140-8b56-5322b5db603c" />
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/c079a898-a01d-4a5d-aeb4-6c3d365267dd" />
+<img width="400" src="https://github.com/user-attachments/assets/ecfc6fca-9399-44d4-b8b2-dd873032250c" />
+
+The dowel rod in the center (as the stationary pivot) could be much shorter and servo could be attached to the bottom of the box instead of suspended. I also experimented with small cardboard boxes and slot size/placement to control the path of the linkage arms. However, I was doing a lot of this experimentation without the servo attached or running code, leading me to realize that none of this actually worked when hooked up:
+- [This video](https://drive.google.com/file/d/13kcttxg_DpbsWDXGM--41ewYwYjlaw-7/view?usp=sharing) shows it barely moving because of too many supports and limiters.
+- [This video](https://drive.google.com/file/d/10Q72l5ZsjxL1bb99l8zoAEU2VY5nzeWZ/view?usp=sharing) shows that with the supports moved and the center dowel removed compeletely, it starts to actually move the origami.
+
+Throughout these changes, the servo would sometimes flip out and rip everything out of the box so I tried to smooth the movement in the code:
+```
+#include <Servo.h>
+Servo myservo;
+int sensorValue;
+int val;
+int prev;
+
+void setup() {
+  myservo.attach(12); // initializing servo
+  Serial.begin(9600);
+}
+
+void loop() {
+  sensorValue = analogRead(A0); //read in LDR values
+
+  //for debugging and value setting
+  Serial.print("Analog IN A0 value = ");
+  Serial.println(sensorValue);
+  Serial.println(val);
 
 
+  if (sensorValue >= 100) { //for normal (high) values, servo should be stationary
+    for(int i=1; i<80; i++) {
+      myservo.write(100 + (i*10));
+      delay(100);
+    }
+  } else if (sensorValue < 40){ //if something is blocking/covering the LDR, servo should turn
+    
+    delay(500);
+  } else { //transitioning (so it doesn't wiggle)
+    val = map(sensorValue, 40, 450, 0, 180); 
+    int diff = abs(prev - val);
+    if (diff > 3) {
+      myservo.write(val);
+    } 
+  }
+  prev = val;
+  delay(50);
+  //myservo.write(0);
+}
+```
 
+The first few attempts didn't work, but after some simplification I finalized the code to ease in and out of the two positions I wanted at small increments:
+```
+#include <Servo.h>
+Servo myservo;
+int sensorValue;
+int val;
+int prev;
 
+void setup() {
+  myservo.attach(12); // initializing servo
+  Serial.begin(9600);
+}
+
+void loop() {
+  sensorValue = analogRead(A0); //read in LDR values
+  val = map(sensorValue, 40, 160, 90, 0);
+  //for debugging and value setting
+  Serial.print("Analog IN A0 value = ");
+  Serial.println(sensorValue);
+
+  if (sensorValue < 40) { 
+    for(int i=1; i<+10; i++) {
+      myservo.write(100 - i*10);
+      delay(15);
+    }
+    myservo.write(0);
+    val = 0;
+    delay(500);
+  } else {
+      if (prev != 100) {
+        for(int i=1; i<+10; i++) {
+          myservo.write(i*10);
+          delay(15);
+        }
+      } else {
+        myservo.write(100);
+      }  
+      //delay(500);
+    val = 100;
+  } 
+  prev = val;
+  delay(500);
+}
+```
+
+[This video](https://drive.google.com/file/d/1QO7pgr_MqTX9molHYryWiB__2kb2LXck/view?usp=sharing) shows it finally working! But it's really shaky and the servo is vibrating. Unfortunately, right after this video, the servo flipped and tore out the supports. I was never able to reproduce that movement despite trying to put things back exactly how I had it before. As time was running out and the origami and the box I had been using were getting progressively more beat up, I tried my best to replicate the same set up in a new box, resulting in this set up for Thursday's presentation:
+</br>
+<img width="600" src="https://github.com/user-attachments/assets/ad8676e6-211e-4ca4-aa7e-e47f8f508f15" />
+
+Following the presentation, I cleaned up the box for the final photos and [demo video](https://drive.google.com/file/d/1cecbN05tKFCYqVWOgXeM1R4IDodoEn1U/view?usp=sharing), as well as slightly improved up on the internal set up:</br>
+<img width="600" src="https://github.com/user-attachments/assets/b9c509df-28ed-451d-8e74-d5983b6ca459" />
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/99b155fa-a6c0-4f55-95c9-28ae4b2343f2" />
+<img width="400" src="https://github.com/user-attachments/assets/55866e94-6c15-452c-90e5-e2693a5464d9" />
+
+In the end I removed all of the supports to allow for greater movement without over twisting the servo. The linkage movement is nearly diagonal but it would eventually kick out any forms of support I tried to add to stablize it. Another important change I made was cutting the dowels connected to the origami so that they didn't drag against the bottom of the box or snag on the cables. I found that attaching to the origami from a bit further away and from the back of the fold was more effective for the movement. I turned the front panel into a door to access the electronics and for people to get a peak at the mechanism inside as well.
+
+Overall, I'm pretty proud of what I was able to make in the time alotted even though I spent many late nights on it and was very stressed out about the deadline. I felt like I chose a fairly difficult movement and mechanism, which was both a fun challenge but also a huge stressor. I think if I were to re-do this project or continue working on it, I would try a double-sided rack and pinion gear mechanism instead. I would have still faced a significant technical challenge (as I have little experience in building mechanisms like this) but it would have allowed for a more compact box and greater control over the movement of the origami. I would also try different smoothing functions that could have given the movement more personality than simply opening and closing, maybe to reflect the emotion of "excitement" I had initially hoped to convey through this piece. 
+
+Thanks for reading!
