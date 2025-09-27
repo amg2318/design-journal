@@ -238,6 +238,8 @@ void loop() {
 
 Following the presentation, I cleaned up the box for the final photos and [demo video](https://drive.google.com/file/d/1cecbN05tKFCYqVWOgXeM1R4IDodoEn1U/view?usp=sharing), as well as slightly improved up on the internal set up:</br>
 <img width="600" src="https://github.com/user-attachments/assets/b9c509df-28ed-451d-8e74-d5983b6ca459" />
+<img width="600" src="https://github.com/user-attachments/assets/dcdb5ca7-cd89-4dd0-b041-386cd99bfcb8" />
+
 </br>
 <img width="400" src="https://github.com/user-attachments/assets/99b155fa-a6c0-4f55-95c9-28ae4b2343f2" />
 <img width="400" src="https://github.com/user-attachments/assets/55866e94-6c15-452c-90e5-e2693a5464d9" />
