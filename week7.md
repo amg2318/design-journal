@@ -14,7 +14,9 @@ Trying the crank and slider (under the box)
 Show that I tried different arm lengths and size ratios
 Considering rack and pinion
 (intermission for lost wallet)
-Makeshift proof of concept for presentation
+Makeshift proof of concept for presentation, deciding to go with the paper airplane
 Switching to cam-piston/dwell mechanism based on presentation feedback
 Cardboard box prototype
 Final
+
+## Reflection
