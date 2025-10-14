@@ -178,6 +178,7 @@ And then I laser cut a variety of pieces that might be useful for setting up the
 <img width="600" src="https://github.com/user-attachments/assets/5572d5bd-ff2b-4392-b579-736f2fbd75b5" />
 
 I made a basic set up with the DC motor attached to the wheel and a slot in a larger box to test the movement ([video](https://drive.google.com/file/d/1Oe10Xf8RKXG2ZhVQlZA10dv6tMDh9rT0/view?usp=sharing)). It generally made the vertical arm move up and down, but dragged the box with it since nothing was firmly attached (you can see in the video I'm holding down the motor with my hand so it doesn't spin on its own).
+</br>
 <img width="400" src="https://github.com/user-attachments/assets/f859894f-5742-43e0-9fdb-ca3490e8779e" />
 </br>
 
