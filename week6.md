@@ -175,6 +175,8 @@ Based on this advice, I make a cardboard prototype to get a general sense of the
 <img width="400" src="https://github.com/user-attachments/assets/56b59f5c-4cb7-476b-a12f-f20b00e923b0" />
 
 And then I laser cut a variety of pieces that might be useful for setting up the mechanism:
+<img width="600" src="https://github.com/user-attachments/assets/4e31b20c-c7bb-4211-8319-ed3cf6db4afb" />
+</br>
 <img width="600" src="https://github.com/user-attachments/assets/5572d5bd-ff2b-4392-b579-736f2fbd75b5" />
 
 I made a basic set up with the DC motor attached to the wheel and a slot in a larger box to test the movement ([video](https://drive.google.com/file/d/1Oe10Xf8RKXG2ZhVQlZA10dv6tMDh9rT0/view?usp=sharing)). It generally made the vertical arm move up and down, but dragged the box with it since nothing was firmly attached (you can see in the video I'm holding down the motor with my hand so it doesn't spin on its own).
