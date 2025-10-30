@@ -1,0 +1,9 @@
+# Ambient Display Project (continued)
+
+This week we continued to work our concept for the ambient display project, pulling data from Strava API and refining an enclosure to compare the user's best and latest 5k times. 
+
+## Electronics
+With the wiring and basic coding foundation complete, we moved on to setting up the Strava API. Pulling data from Strava is a little more complicated than pulling from Open-Meteo because it requires 0Auth permissions from the user to access the data. After spending some time with Roopa and ChatGPT in office hours, we were able to gain access to my Strava account. 
+
+First, I made an application in Strava to get the client id, client secret, and other information in order to get the authorization key:
+</br>
