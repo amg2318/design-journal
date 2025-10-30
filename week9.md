@@ -159,12 +159,12 @@ void loop() {
 Here's the result using my account data (I hadn't used Strava prior to this project):
 </br>
 </br>
-<img width="400" src="https://github.com/user-attachments/assets/e4ae589a-235e-4e8f-98eb-fe8b200ba678" />
+<img width="600" src="https://github.com/user-attachments/assets/c31e5b88-ffed-445d-8ad9-71d2b0cda3db" />
 </br>
 So I went on a run and then ran the program again, with it successfully showing the result of my run:
 </br>
 </br>
-<img width="400" src="https://github.com/user-attachments/assets/d0314caa-4d46-44e9-abea-233c7d9a5c9f" />
+
 
 This progress provided us with a foundation for understanding JSON documents and objects, as well as how to interact with the Strava API. Next week, we will tackle the true functionality we want in the program. 
 </br>
