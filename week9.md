@@ -23,4 +23,151 @@ With this authorization key, I could then use curl requests in the terminal to p
 <img width="600" src="https://github.com/user-attachments/assets/0652c7b5-ad75-48c9-ba3e-f2cba12b5d8e" />
 </br>
 </br>
-So now with all the information we needed to access the Strava API, we could attempt the real code. 
+So now with all the information we needed to access the Strava API, we could attempt the real code. Based on the [API documentation](https://developers.strava.com/docs/reference/#api-models-SummaryActivity), we neeeded to start with a search through all the user's activities for runs 5km or longer (since Strava records "Best Effort" times for each common distance within the distance you ran, for example for 400m, 5km and 10km). There's a lot more to the final functionality, but we wanted to test the most basic level of accessing the Strava API. So we wrote the following code (with some help from ChatGPT, including switching to a newer JSON library) to print the latest activity:
+
+```
+#include <secrets.h>
+#include <WiFi.h>
+#include <HTTPClient.h>
+//#include <Arduino_JSON.h>
+#include <ArduinoJson.h>
+#include <Adafruit_NeoPixel.h>
+
+// ---------- WiFi credentials ----------
+const char* ssid = SECRET_SSID;
+const char* password = SECRET_PASSWORD;
+
+// ---------- Strava API ----------
+String client_id = "182356";
+String client_secret = "9c5681ffe4ccd83ef92169edd25241e4b138a976";
+String refresh_token = "92c19fe6bd9b40c4270cd336310cea62805309f3";
+
+String access_token;
+unsigned long token_expires = 0;
+
+void connectToWiFi() {
+  Serial.println("Connecting to WiFi...");
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\n✅ WiFi connected!");
+}
+
+// Refresh access token using the refresh token
+bool refreshAccessToken() {
+  HTTPClient http;
+  http.begin("https://www.strava.com/oauth/token");
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  String postData = "client_id=" + client_id +
+                    "&client_secret=" + client_secret +
+                    "&grant_type=refresh_token" +
+                    "&refresh_token=" + refresh_token;
+
+  int httpCode = http.POST(postData);
+  if (httpCode != 200) {
+    Serial.printf("Token refresh failed, HTTP code: %d\n", httpCode);
+    http.end();
+    return false;
+  }
+
+  String payload = http.getString();
+  http.end();
+
+  StaticJsonDocument<1024> doc;
+  DeserializationError error = deserializeJson(doc, payload);
+  if (error) {
+    Serial.println("Failed to parse token JSON");
+    return false;
+  }
+
+  access_token   = doc["access_token"].as<String>();
+  refresh_token  = doc["refresh_token"].as<String>();
+  token_expires  = doc["expires_at"].as<unsigned long>();
+
+  Serial.println("✅ Access token refreshed!");
+  Serial.println("Access token: " + access_token);
+  Serial.println("New refresh token: " + refresh_token);
+  Serial.println("Expires at (epoch): " + String(token_expires));
+
+  return true;
+}
+
+void fetchLatestActivity() {
+  if (access_token == "") {
+    Serial.println("No access token. Try refreshing first.");
+    return;
+  }
+
+  HTTPClient http;
+  http.begin("https://www.strava.com/api/v3/athlete/activities?per_page=1");
+  http.addHeader("Authorization", "Bearer " + access_token);
+
+  int httpCode = http.GET();
+  if (httpCode != 200) {
+    Serial.printf("Failed to get activities, HTTP code: %d\n", httpCode);
+    http.end();
+    return;
+  }
+
+  String payload = http.getString();
+  http.end();
+
+  StaticJsonDocument<4096> doc;
+  DeserializationError error = deserializeJson(doc, payload);
+  if (error) {
+    Serial.println("Failed to parse activity JSON");
+    return;
+  }
+  JsonObject act = doc[0];
+  String name = act["name"].as<String>();
+  float distance = act["distance"].as<float>() / 1000.0; // meters → km
+  String type = act["type"].as<String>();
+  String date = act["start_date_local"].as<String>();
+
+  Serial.println("🏁 Latest Activity:");
+  Serial.println("Name: " + name);
+  Serial.println("Type: " + type);
+  Serial.printf("Distance: %.2f km\n", distance);
+  Serial.println("Date: " + date);
+}
+
+
+void setup() {
+  Serial.begin(115200);
+  connectToWiFi();
+
+  if (refreshAccessToken()) {
+    fetchLatestActivity();
+  } else {
+    Serial.println("❌ Could not refresh token.");
+  }
+}
+
+void loop() {
+  // Optionally refresh every few hours
+  static unsigned long lastCheck = 0;
+  if (millis() - lastCheck > 3600000) { // every 1 hour
+    lastCheck = millis();
+    refreshAccessToken();
+  }
+}
+```
+
+Here's the result using my account data (I hadn't used Strava prior to this project):
+</br>
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/e4ae589a-235e-4e8f-98eb-fe8b200ba678" />
+</br>
+So I went on a run and then ran the program again, with it successfully showing the result of my run:
+</br>
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/d0314caa-4d46-44e9-abea-233c7d9a5c9f" />
+
+This progress provided us with a foundation for understanding JSON documents and objects, as well as how to interact with the Strava API. Next week, we will tackle the true functionality we want in the program. 
+</br>
+
+## Fabrication
+
