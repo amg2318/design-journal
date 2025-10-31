@@ -1,14 +1,21 @@
-# Ambient Display Project (continued)
+# Ambient Display (continued)
 
-In our final week of working on the ambient display project, we reach the desired functionality of lighting an aesthetic enclosure like a bar chart to visualize the comparison of a runner's best and latest 5k times. 
+In our final week of the ambient display project, Isabella and I were able to reach the functionality we were aiming for: an aesthetic box that visualizes the comparison between a runner's best and latest 5k times with LEDs. 
+
+## Fabrication
+
+I'm writing about the fabrication first this week since the bulk of it was completed before our coding and electronics section finished, despite working on them simultaneously. 
+
+
 
 ## Electronics
 
-We began this week by making sequential diagram to better understand what was required of our code:
+We began this week by making a sequential diagram to better understand what our code needed to do:
 </br>
-![seqdiagram](https://github.com/user-attachments/assets/2052e4e7-f94e-4c36-8a28-a4d0aa02c2f1)
+![seqdiagram](https://github.com/user-attachments/assets/b5dc1cfa-86da-494c-a495-aa4bd7982722)
+</br>
 
-After carefully understanding how to get the information we wanted from the Strava API, we made a version that would call the API once on upload and use the built-in loop to check if we needed to refresh our access:
+In our first version, we had the program pull from the API once on upload to the ESP32 and use the loop function to refresh the access code:
 ```
 #include <secrets.h>
 #include <WiFi.h>
@@ -239,3 +246,7 @@ void loop() {
   }
 }
 ```
+
+
+
+We learned a lot about error codes and how to check if the Strava API was really connecting with the ESP32. Also, we kept having to increase the memory of the initial JSON doc (discovered through debugging with ChatGPT), especially when pulling from Isabella's data, as she is a long time user with many activities to search through. While this code worked very reliably, we needed the code to run constantly to be truly "ambient". 
