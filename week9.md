@@ -164,6 +164,7 @@ Here's the result using my account data (I hadn't used Strava prior to this proj
 So I went on a run and then ran the program again, with it successfully showing the result of my run:
 </br>
 </br>
+<img width="600" src="https://github.com/user-attachments/assets/c44ea205-214e-4353-ac6b-0ac0dbc74046" />
 
 
 This progress provided us with a foundation for understanding JSON documents and objects, as well as how to interact with the Strava API. Next week, we will tackle the true functionality we want in the program. 
@@ -171,3 +172,35 @@ This progress provided us with a foundation for understanding JSON documents and
 
 ## Fabrication
 
+To upgrade from the wooden laser cut box, we decided to make a rounded box using a combination of laser-cut acrylic and 3D printing:
+</br>
+<img width="600" src="https://github.com/user-attachments/assets/612f47b0-137a-4442-b0c5-bf0e53919b35" />
+
+Then we designed the new version of the enclosure in Fusion:
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/c1b95d93-ac26-43ee-885b-c8b78cc34cfa" />
+<img width="400" src="https://github.com/user-attachments/assets/b83998cf-c31c-4bb5-81c1-ca29dce32ffe" />
+</br>
+</br>
+And then we set it up to print on the Prusa 3D printer:
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/79aff06d-b516-4d08-bdf7-017c4d139edf" />
+</br>
+</br>
+However, due to poor plate adhesion and too small of a brim, the print warped towards the end of the print, making it unusuable for the final version:
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/e152c11b-405e-415f-8ddd-30e19793f4bb" />
+<img width="400" src="https://github.com/user-attachments/assets/7086c719-f7d8-4786-ba54-9fb0862c62e9" />
+<img width="400" src="https://github.com/user-attachments/assets/471abe88-232c-46e5-9465-ad216faa2138" />
+<img width="400" src="https://github.com/user-attachments/assets/48a276f6-f7ff-4545-a532-3b69cbd6782b" />
+</br>
+It was still usable enough for testing, so we tested the assembly with electronics and realized that the black PLA obscured the light too much and the slots for the LEDs came out smaller than expected (you can see it working with the LED simple test [here](https://drive.google.com/file/d/1COcR_1v7Wn5exQPmD2mvQxedGfx1DesR/view?usp=sharing):
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/4d81aa66-afd5-4cc3-9521-0ceddb7e4ac4" />
+</br>
+
+We also practiced using the heat press for the brass inserts we wanted to use on the back of our enclosure:
+</br>
+<img width="400" src="https://github.com/user-attachments/assets/dfe0b3ba-679a-4976-91a0-9ffee53aaa5a" />
+
+For next week, we plan to print a new version of the enclosure on the Bambu printer with better settings (more brim and organic instead of grid support) and white PLA (for better light diffusion) as well as laser cut acrylic for the front and back. 
