@@ -164,8 +164,8 @@ Here's the result using my account data (I hadn't used Strava prior to this proj
 So I went on a run and then ran the program again, with it successfully showing the result of my run:
 </br>
 </br>
-<img width="600" src="https://github.com/user-attachments/assets/c44ea205-214e-4353-ac6b-0ac0dbc74046" />
-
+<img width="600" src="https://github.com/user-attachments/assets/f0a6329d-9cd4-4a4b-a659-7a023775ac5b" />
+</br>
 
 This progress provided us with a foundation for understanding JSON documents and objects, as well as how to interact with the Strava API. Next week, we will tackle the true functionality we want in the program. 
 </br>
