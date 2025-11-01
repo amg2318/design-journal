@@ -4,9 +4,33 @@ In our final week of the ambient display project, Isabella and I were able to re
 
 ## Fabrication
 
-I'm writing about the fabrication first this week since the bulk of it was completed before our coding and electronics section finished, despite working on them simultaneously. 
-
-
+I'm writing about the fabrication first this week since the bulk of it was completed before our coding and electronics section finished, despite working on them simultaneously. Since our first attempt at 3d printing a box failed, we edited our file and tried again with different print settings on the Bambu with white PLA filament:
+</br>
+</br>
+<img width="300" src="https://github.com/user-attachments/assets/3d7a4cf3-ff63-4e38-a678-191e937e4c91" />
+<img width="300" src="https://github.com/user-attachments/assets/680d138b-cf47-4f8c-a509-6d8f51e8930d" />
+</br>
+</br>
+At first we tried printing face down, but it seemed like that print was going strangely (see above) so we stopped the print and flipped the print so that the open side was face down instead:
+</br>
+</br>
+<img width="300" src="https://github.com/user-attachments/assets/08df4db5-8e0b-42d8-a67a-ee62a4a8245a" />
+<img width="300" src="https://github.com/user-attachments/assets/1b396089-3f33-4c35-aada-cf0ec7d00286" />
+<img width="300" src="https://github.com/user-attachments/assets/23cfaab5-ce90-488d-a523-37b09890012b" />
+</br>
+</br>
+This time, our enclosure printed so cleanly and we were able to set the brass inserts in easily. Then, we designed the front insert and the back cover for the box in Illustrator:
+</br>
+<img width="200" src="https://github.com/user-attachments/assets/a82933f3-5807-472c-8df1-fea938a3945c" />
+<img width="200" src="https://github.com/user-attachments/assets/4a13e682-e49a-45e7-8062-d80fe5704274" />
+</br>
+We cut a lot of pieces of clear acrylic trying to get the size exactly right to fit in the slot in our 3D printed enclosure, but ultimately cut some scrap frosted acrylic for the final fit. You can see that the first few attempts just barely didn't fit the enclosure:
+</br>
+<img width="300" src="https://github.com/user-attachments/assets/9a381887-b0c8-48e0-9ac9-dd5561bc923f" />
+<img width="300" src="https://github.com/user-attachments/assets/b74cb3de-9dc7-42c8-918b-bfffddaaa4c0" />
+</br>
+</br>
+With our fabrication pieces completed, we focused on adding the final touches to our code.
 
 ## Electronics
 
