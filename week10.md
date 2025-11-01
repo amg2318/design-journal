@@ -39,7 +39,7 @@ With our fabrication pieces completed, we assembled the enclosure with the elect
 
 We began this week by making a sequential diagram to better understand what our code needed to do:
 </br>
-![seqdiagram](https://github.com/user-attachments/assets/b5dc1cfa-86da-494c-a495-aa4bd7982722)
+<img width="4544" height="1888" alt="image" src="https://github.com/user-attachments/assets/d6eb6c12-f8a4-4cbd-bc3f-3b5c246fc428" />
 </br>
 
 In our first version, we had the program pull from the API once on upload to the ESP32 and use the loop function to refresh the access code:
