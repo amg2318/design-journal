@@ -283,7 +283,7 @@ We experimented a lot with how the values would map to the number of pixels and 
 Then, we experimented with mapping the values based on our general ability to run a 5K (in the end choosing 25-30 minutes, with 25 minutes being faster than we could achieve and requiring at least some of the pixels to be lit while still making the difference in times observable). Since we were working simultaneously (Isabella was doing fabrication while I was experimenting with the code), I would use an ESP32 that wasn't attached to the box or Neopixels to test sometimes and print the values out instead:
 </br>
 </br>
-<img width="400" src="https://github.com/user-attachments/assets/d535f604-9b06-497b-8021-f9ec4e315a70" />
+<img width="800" src="https://github.com/user-attachments/assets/d535f604-9b06-497b-8021-f9ec4e315a70" />
 </br>
 Above you can see the times are the same but the number of pixels is changing. I also added 2 extra Neopixels to be lit by default so that the bars of light weren't too small compared to the box.
 </br>
