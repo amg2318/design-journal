@@ -15,3 +15,11 @@ Ambient Display:
 * [Week 8](https://github.com/amg2318/design-journal/blob/main/week8.md)
 * [Week 9](https://github.com/amg2318/design-journal/blob/main/week9.md)
 * [Week 10](https://github.com/amg2318/design-journal/blob/main/week10.md)
+
+Final Project:
+* Week 11
+* Week 12
+* Week 13
+* Week 14 (Thanksgiving)
+* Week 15
+* Week 16
