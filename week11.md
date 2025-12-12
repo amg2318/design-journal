@@ -49,9 +49,7 @@ Our main debate was over having a scanner or a more stationary object, but we en
 </br>
 </br>
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/c2cb0611-96ac-481f-8a8f-8100259be747" />
-
-
-
-
-
+</br>
+</br>
+We planned to explore sound synthesis, computer vision, and visual representations of the object detection with Neopixels (in case sound didn't work out, otherwise a nice-to-have to complement the music) in the next week. 
 
