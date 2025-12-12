@@ -41,7 +41,7 @@ Roboflow Rapid uses existing models (both official and user-created) to quickly 
 The model is output as an API you can call from your code, but fully publishing it like this costs money unfortunately. So I tried the more manual method (Roboflow Instant, which isn't very "instant"), where I manually make labels on each of the items in photos myself:
 </br>
 </br>
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/05899ecd-4f50-44ab-b6e0-300908b6d19e" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/05899ecd-4f50-44ab-b6e0-300908b6d19e" />
 </br>
 </br>
 Ideally, I would do this with 100+ photos but I wanted to just make sure I could use it and tried to train the model with what I had. I ended up importing images from my Teachable Machine models also to help with the numbers. Then, I exported it to [Google Colab](https://colab.research.google.com/drive/1SycN5GS7OvosmuruDpsE1jkHfburwN1A?usp=sharing) to generate a file for me to add to p5.js with the "help" of ChatGPT. I got to this point at the time of the feasibility experiment presentation and thought that it seemed like the next steps were fairly simple. 
