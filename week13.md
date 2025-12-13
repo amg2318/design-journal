@@ -15,7 +15,7 @@ You can see and hear it working [here].
 
 ## Building up the functionality
 
-The "five buttons" code would sometimes run into a buffer error since in switching between audio sets, it began loading the sound rather than playing it. So, I revised the code to work with our computer vision model, pre-load all the sounds, and layer them together as more objects were placed. Here is the p5 file for this version. I had picked the sound files somewhat randomly based on what was easy to find, and it really showed when testing ([video](https://drive.google.com/file/d/1z9dqLS7_6EfYGYPc5Vv4CYpvdw8UiQbb/view?usp=sharing)). 
+The "five buttons" code would sometimes run into a buffer error since in switching between audio sets, it began loading the sound rather than playing it. So, I revised the code to work with our computer vision model, pre-load all the sounds, and layer them together as more objects were placed. I also added a slider in p5 to control volume, mimicking the sliders and potentiometers we wanted to add through serial later. Here is the p5 file for this version. I had picked the sound files somewhat randomly based on what was easy to find, and it really showed when testing ([video](https://drive.google.com/file/d/1z9dqLS7_6EfYGYPc5Vv4CYpvdw8UiQbb/view?usp=sharing)). 
 </br>
 </br>
 <img width="600" alt="Screenshot 2025-12-12 at 3 48 48 PM" src="https://github.com/user-attachments/assets/068fba7a-9251-4582-8975-391d2f11e558" />
@@ -24,3 +24,15 @@ The "five buttons" code would sometimes run into a buffer error since in switchi
 I attempted to find better sound files to make them sound better together, replacing some of the unusual or abrupt sound files I had added before. You can hear the difference [here](https://drive.google.com/file/d/17nyxIfTCZkyDxZvTV4BJw9jxZhLFSQlE/view?usp=sharing). 
 
 I was pretty happy with this functionality, and decided to tackle the sound effects/manipulation in following weeks. 
+
+In preparation for fabrication, I started soldering wires to the rotating and sliding potentiometers and used the built-in test code for potentiometers to make sure it worked. 
+</br>
+</br>
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/3231395d-31c4-4b6e-941a-934b9ad50b50" />
+</br>
+The actual wiring is really hard to see, so I made a quick fritzing diagram to show remember the connections (TinkerCAD doesn't have ESP32 nor sliding potentiometers so I did what I could):
+</br>
+</br>
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/2982823c-3c0f-48db-8305-f130033d2781" />
+
+As you can see from the diagram, I began to plan out functionality of the buttons and dials to add into the diagram. With the wiring planned out and the wires soldered to each part, we could focus on developing the form. 
