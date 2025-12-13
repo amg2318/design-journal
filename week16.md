@@ -96,6 +96,8 @@ Here are a couple of pictures from the Jacobs Showcase of our project. Sabrina M
 <img width="400" src="https://github.com/user-attachments/assets/c857a4bc-7def-4599-97e4-4d2384bb49ca" />
 </br>
 </br>
+Watch our final video [here](https://youtu.be/vcd-YACCDbc).
+
 Overall, I'm really happy with our final product. It looks really good and the functionality is very clear and discernable, even though we had to cut a lot of aspects of the project I was excited about (e.g. multiple detection, Neopixels, layering sound). Working with Alexis and Jill was wonderful. Getting feedback from the critics was exciting, especially since many of them brought up features we had already attempted or considered. We got some pointers for how to explore our original idea of having different compartments that manipulated the sound, as well as suggestions for different ways to approach multiple detection. Another frequent comment we got was that we could have made it more colorful as a children's toy. With more time, I would have liked to make more sound files and attempt layering the sounds again since I do really believe it's possible. Additionally, I think more form exploration in color and modularity could have been really fun. In the future, I might also look into sound generation based on other critic suggestions as well. 
 
 This is my last entry, so thank you very much for reading! I know this project was less visual than the last few due to the code-heavy nature but I hope it still communicated my team's hard work and many iterations. :)
